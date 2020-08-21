@@ -553,7 +553,10 @@ SCDoc {
 					};
 				}
 			};
-			rootPaths = if(LanguageConfig.excludeDefaultPaths) {
+			// rootPaths = if(LanguageConfig.excludeDefaultPaths) {
+			// 22 Aug 2020 06:33
+			// workaround till excludeDefaultPaths primitive gets implemented
+			rootPaths = if(true) {
 				[]
 			} {
 				[thisProcess.platform.userExtensionDir, thisProcess.platform.systemExtensionDir]
